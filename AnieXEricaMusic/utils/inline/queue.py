@@ -67,9 +67,28 @@ def aq_markup(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                    text=_["CLOSE_BUTTON"],
-                    callback_data="close",
+                text="ᴘᴀᴜsᴇ",
+                callback_data=f"ADMIN Pause|{chat_id}",
+            ),
+            InlineKeyboardButton(text="sᴛᴏᴘ", 
+                                 callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="sᴋɪᴘ", 
+                                 callback_data=f"ADMIN Skip|{chat_id}"),
+        ],
+        [
+            InlineKeyboardButton(
+                text="ʀᴇsᴜᴍᴇ", 
+                callback_data=f"ADMIN Resume|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="ʀᴇᴘʟᴀʏ", 
+                callback_data=f"ADMIN Replay|{chat_id}"
             ),
         ],
+        [
+            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], 
+                                 callback_data="close"),
+        ],        
     ]
+
     return buttons
